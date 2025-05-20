@@ -1,0 +1,68 @@
+/*logins4production.css*/
+div#login-modal p{
+/*text-align: left;*/
+}
+
+div.modal-body input.input-small{
+display: block;
+margin-bottom: 10px;
+width: 60% !important;
+}
+
+div#login-modal h3{
+margin-top: 1px;
+margin-bottom: 1px;
+font-size: 15px;
+color: #ba202f !important;
+line-height: 16px;
+margin-left: 1px;
+}
+
+p.eLogin{
+font-size: 14px;
+margin-bottom: -1px;
+margin-top: -2px;
+}
+
+p.eLogin2{
+font-size: 14px;
+margin-top: 5px;
+}
+
+div.no-cover > i.no-cover-img{
+display: none;
+}
+
+
+div#login-modal p {
+    text-align: left;
+}
+
+div#login-modal p.eLogin {
+    font-size: 14px;
+    margin-bottom: -1px;
+    margin-top: -2px;
+}
+div#login-modal p {
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div#login-modal #loginText {
+    text-align: left !important;
+    margin-left: 0%  !important;
+    margin-right: 0% !important;
+}
+
+
+div#login-modal .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-left: 30px;
+}
+
+#login-modal .input-group + .input-group {
+margin-top: 0px; 
+}
