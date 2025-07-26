@@ -701,7 +701,7 @@
             }
             ////////////console.log("which_resource_type_icon",which_resource_type_icon);
             var htmlstring = '<span class="gen_info_labelSRP paddingRight2">Type: </span> ' +
-                ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/' + which_resource_type_icon +
+                ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + which_resource_type_icon +
                 '"alt="' + which_resource_type + '" title="' + which_resource_type_title + '">' +
                 '<span class="gen_info_dataitemSRP indent_data">' + which_resource_type + '</span>';
             ////////////console.log("zzzzzzzzzzzzzzzzzzzZZZZZZZZZZZZZ", htmlstring);
@@ -723,7 +723,7 @@
                 if (bib.marc._marc.fields[i] === "008") {
                     has008 = true;
                 }
-            } //end for
+            } //end for//'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/'
             if (bib.marc.rtype() === 'BKS' || bib.marc.rtype() === 'SER' || bib.marc.rtype() === 'SCO') {
                 //return thebibRecordFormat = 'WE ARE AT BKS OR SER or maybe even SCO ?NOW';
                 if (has008 == true) {
@@ -734,7 +734,7 @@
                     }
                     if (bib.marc.ctrl('008[24]') === 'b' || bib.marc.ctrl('008[25]') === 'b' || bib.marc.ctrl('008[26]') === 'b' || bib.marc.ctrl('008[27]') === 'b') {
                         //<img src="/opac-tmpl/prog/famfamfam/silk/text_list_bullets.png" alt="bibliography" title="bibliography">
-                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/text_list_bullets.png" alt="bibliography" title="bibliography"> ' + ' Bibliography';
+                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'text_list_bullets.png" alt="bibliography" title="bibliography"> ' + ' Bibliography';
                     }
                     thebibRecordFormat = thebibRecordFormat + ' | ';
                 } //has008
@@ -776,7 +776,7 @@
                 }
                 if (bib.marc.ctrl('007[0]') === 'c' && bib.marc.ctrl('007[1]') === 'r') { // Remote test
                     // 007/00 =c   AND   007/01=r -> Remote
-                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/drive_web.png" alt="Remote" title="Remote"> ' + 'Remote | ';
+                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'drive_web.png" alt="Remote" title="Remote"> ' + 'Remote | ';
                 }
                 if (bib.marc.ctrl('007[0]') === 's' && bib.marc.ctrl('007[1]') === 's') { // Sound cassette test
                     // 007/00 =s   AND   007/01=s -> Sound cassette
@@ -788,11 +788,11 @@
                 }
                 if (bib.marc.ctrl('007[0]') === 'v' && bib.marc.ctrl('007[1]') === 'f') { // Videocassette test
                     // 007/00 =v   AND   007/01=f -> Videocassette
-                    thebibRecordFormat = thebibRecordFormat + '<img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/videocassette.png" alt="videocassette" title="videocassette"> ' + 'Videocassette | ';
+                    thebibRecordFormat = thebibRecordFormat + '<img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'videocassette.png" alt="videocassette" title="videocassette"> ' + 'Videocassette | ';
                 }
                 if (bib.marc.ctrl('007[0]') === 'v' && bib.marc.ctrl('007[1]') === 'd') { // Videodisc test
                     // 007/00 =v   AND   007/01=d -> Videodisc
-                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/dvd.png" alt="DVD" title="DVD"> ' + 'Videodisc | ';
+                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'dvd.png" alt="DVD" title="DVD"> ' + 'Videodisc | ';
                 }
                 if (bib.marc.ctrl('007[4]') === 'v') { // Videodisc test
                     // 007/00 =v   AND   007/01=d -> Videodisc
@@ -800,11 +800,11 @@
                     cdFound = true;
                 }
                 if ((bib.marc.ctrl('007[0]') === 's' && bib.marc.ctrl('007[1]') === 'd' && bib.marc.ctrl('007[3]') === 'f')) { // CD test
-                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/cd.png" alt="CD" title="CD"> ' + ' CD | ';
+                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'cd.png" alt="CD" title="CD"> ' + ' CD | ';
                     cdFound = true;
                 }
                 if ((bib.marc.ctrl('007[0]') === 's' && bib.marc.ctrl('007[1]') === 'd' && bib.marc.ctrl('007[3]') === 'b')) { // LP test
-                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
+                    thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
                     lpFound = true;
                 }
             } //has007 =="T"
@@ -814,7 +814,7 @@
                 } else {
                     ////////////console.log("300c is defined BBBB", bib.marc.subfield('300c'),bib.marc.subfield('300c').length);
                     if (bib.marc.subfield('300c').search("4 3/4") > -1) {
-                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/cd.png" alt="CD" title="CD"> ' + ' CD | ';
+                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'cd.png" alt="CD" title="CD"> ' + ' CD | ';
                         cdFound = true;
                     }
                 }
@@ -824,7 +824,7 @@
                 } else {
                     ////////////console.log("305c is defined BBBB", bib.marc.subfield('305c'),bib.marc.subfield('305c').length);
                     if (bib.marc.subfield('305c').search("4 3/4") > -1) {
-                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/cd.png" alt="CD" title="CD"> ' + ' CD | ';
+                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'cd.png" alt="CD" title="CD"> ' + ' CD | ';
                         cdFound = true;
                     }
                 }
@@ -835,7 +835,7 @@
                 } else {
                     // //////////console.log("300c is defined BBBB", bib.marc.subfield('300c'),bib.marc.subfield('300c').length);
                     if (bib.marc.subfield('300c').search("12 in") > -1 || bib.marc.subfield('300c').search("33 1/3") > -1) {
-                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
+                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
                         lpFound = true;
                     }
                 }
@@ -844,7 +844,7 @@
                 } else {
                     // //////////console.log("305c is defined BBBB", bib.marc.subfield('305c'),bib.marc.subfield('305c').length);
                     if (bib.marc.subfield('305c').search("12 in") > -1 || bib.marc.subfield('305c').search("33 1/3") > -1) {
-                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
+                        thebibRecordFormat = thebibRecordFormat + ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'lp.png" alt="LP" title="LP"> ' + ' LP / Vinyl | ';
                         lpFound = true;
                     }
                 }
@@ -1148,7 +1148,7 @@
                     if (bib.marc.ctrl('008[24]') !== 'number_sign' && bib.marc.ctrl('008[24]') !== ' ' && bib.marc.ctrl('008[24]') !== '|' && bib.marc.ctrl('008[24]') != 'u') { //if 5
                         thebibRecordNatureOfContents = NatureOfContents[bib.marc.ctrl('008[24]')];
                         properlyFormattedHtmlString = '<span class="main_divider">|</span><span class="gen_info_labelSRP paddingRight2">Nature of contents: </span>' +
-                            '<img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/user.png" alt="NOC" title="NOC"> ' + '<span class="gen_info_dataitemSRP indent_data">' + thebibRecordNatureOfContents + '</span>';
+                            '<img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + 'user.png" alt="NOC" title="NOC"> ' + '<span class="gen_info_dataitemSRP indent_data">' + thebibRecordNatureOfContents + '</span>';
                     } //if 5
                 } //if 3
             } //if 0
@@ -1265,7 +1265,7 @@
                 if (bib.marc.rtype() === 'SER') {
                     //fix z below to reflect # if # actually occurs as a valid Marc entry
                     if (bib.marc.ctrl('008[21]') !== ' ' && bib.marc.ctrl('008[21]') !== 'z' && bib.marc.ctrl('008[21]') !== '|') {
-                        theTypeofContRes = ' <img src="' + ourDefaultCDNpath + 'koha/2024/prod/icons/' + TypeofContResImage[bib.marc.ctrl('008[21]')] + '"alt="' +
+                        theTypeofContRes = ' <img src="' + 'https://cdn.jsdelivr.net/gh/EpsOmega/Prod@images/' + TypeofContResImage[bib.marc.ctrl('008[21]')] + '"alt="' +
                             TypeofContResImage[bib.marc.ctrl('008[21]')] + '" title="' + TypeofContResImage[bib.marc.ctrl('008[21]')] + '">' + TypeofContRes[bib.marc.ctrl('008[21]')];
                         properlyFormattedHtmlString = '<span class="main_divider">|</span><span class="gen_info_labelSRP paddingRight2">Type of continuing resource: </span>' +
                             '<span class="gen_info_dataitemSRP indent_data">' + theTypeofContRes + '</span>';
